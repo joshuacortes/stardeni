@@ -1,502 +1,415 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>StarDeni Independent Living — Eastvale, CA | Comfortable, Safe Senior Living</title>
-  <meta name="description" content="StarDeni Independent Living provides residential accommodations, daily nutritional meals, laundry & housekeeping, and tailored social services to help older adults live healthier, happier, and more independent lives in Eastvale, CA." />
-  <meta name="keywords" content="Independent living, senior living Eastvale, assisted living, home care, StarDeni" />
-  <link rel="canonical" href="https://yourdomain.example/" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="StarDeni Independent Living — Comfortable, Safe Senior Living" />
-  <meta property="og:description" content="Residential accommodations, daily meals, laundry, housekeeping and social referrals to support independent & thriving senior lives in Eastvale, CA." />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="StarDeni Independent Living" />
-  <!-- Simple styles (replace/extend with your CSS framework or use the CSS below) -->
-  <style>
-    :root{
-      --brand:#6b4cff;
-      --accent:#ff7a59;
-      --muted:#6b7280;
-      --bg:#f7f7fb;
-      --card:#ffffff;
-      --max-width:1200px;
-      --radius:12px;
-      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:#111;line-height:1.45;-webkit-font-smoothing:antialiased}
-    .container{max-width:var(--max-width);margin:0 auto;padding:0 20px}
-    header{background:linear-gradient(90deg,#fff 0%, #faf8ff 100%);border-bottom:1px solid #eee;position:sticky;top:0;z-index:60}
-    .topbar{display:flex;justify-content:space-between;align-items:center;padding:10px 0}
-    .brand{display:flex;gap:14px;align-items:center}
-    .logo{width:52px;height:52px;border-radius:10px;background:var(--brand);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px}
-    .site-title{font-weight:700;font-size:18px}
-    nav{display:flex;align-items:center;gap:24px}
-    .nav-links{display:flex;gap:8px;align-items:center}
-    .nav-link{padding:12px 8px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:600}
-    .nav-link:hover,.nav-link:focus{background:#f0edff;color:var(--brand);outline:none}
-    .cta{background:var(--accent);color:#fff;padding:8px 14px;border-radius:8px;font-weight:700;text-decoration:none}
-    .hero{padding:36px 0;display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:start}
-    .hero-card{background:var(--card);padding:28px;border-radius:14px;box-shadow:0 6px 20px rgba(40,40,80,0.05)}
-    h1{margin:0 0 12px;font-size:28px;line-height:1.12}
-    p.lead{color:var(--muted);margin:0 0 18px}
-    .quick-ctas{display:flex;gap:10px;flex-wrap:wrap}
-    .search{display:flex;gap:8px;align-items:center}
-    .search input{padding:10px 12px;border-radius:9px;border:1px solid #e6e7ee;width:100%}
-    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
-    .service{background:linear-gradient(180deg,#fff,#fcfcff);padding:18px;border-radius:10px;border:1px solid #f0eff8}
-    .service h3{margin:0 0 8px;font-size:16px}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .map-card iframe{width:100%;height:260px;border:0;border-radius:10px}
-    .contact-card{padding:16px;display:flex;flex-direction:column;gap:6px}
-    .small{font-size:13px;color:var(--muted)}
-    footer{margin-top:34px;padding:28px 0;border-top:1px solid #eee;background:transparent}
-    .footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    .footer-col h4{margin:0 0 10px}
-    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#eef6ff;color:var(--brand);font-weight:700}
-    /* Mega menu styles */
-    .mega-toggle{display:none}
-    .mega{position:absolute;left:0;right:0;top:100%;background:#fff;border-top:4px solid var(--brand);box-shadow:0 20px 40px rgba(20,20,60,0.08);padding:22px 0;display:none}
-    .mega .container{display:flex;gap:28px}
-    .mega-column{width:25%}
-    .mega-column ul{list-style:none;padding:0;margin:0}
-    .mega-column li{padding:6px 0}
-    .mega-column a{color:#111;text-decoration:none}
-    .nav-item{position:relative}
-    /* Breadcrumb */
-    .breadcrumb{font-size:13px;color:var(--muted);margin:12px 0}
-    /* Cards */
-    .card{background:var(--card);padding:16px;border-radius:12px;border:1px solid #f0eff5}
-    /* Testimonials */
-    .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
-    .testimonial{padding:16px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfbff);border:1px solid #f2f2f8}
-    /* FAQ */
-    .faq-item{margin-bottom:12px}
-    .faq-q{cursor:pointer;padding:12px;border-radius:8px;background:#fff;border:1px solid #ececf3}
-    .faq-a{padding:12px;display:none;background:#fff;border:1px solid #f3f3f8;border-top:0;border-radius:0 0 8px 8px}
-    /* Responsive */
-    @media (max-width:980px){
-      .hero{grid-template-columns:1fr;gap:18px}
-      .services{grid-template-columns:repeat(2,1fr)}
-      .testimonials{grid-template-columns:1fr}
-      .footer-grid{grid-template-columns:repeat(2,1fr)}
-      .nav-links{display:none}
-      .mobile-toggle{display:inline-flex}
-      .mega{position:static}
-    }
-    @media (max-width:560px){
-      .services{grid-template-columns:1fr}
-      .footer-grid{grid-template-columns:1fr}
-    }
-    /* Tiny utilities */
-    .muted{color:var(--muted)}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none}
-    .btn-outline{border:1px solid #e6e6f3;background:transparent}
-    .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stardeni Independent Living | Eastvale, CA</title>
+    <meta name="description" content="Stardeni Independent Living in Eastvale, CA provides safe, comfortable senior housing, nutritious meals, housekeeping, and personalized care. Schedule a tour today.">
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body>
-  <!-- JSON-LD LocalBusiness schema for SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HealthAndBeautyBusiness",
-    "name": "StarDeni Independent Living",
-    "image": "",
-    "url": "https://yourdomain.example/",
-    "telephone": "(951) 496-6577",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "13865 Ivywood Ct",
-      "addressLocality": "Eastvale",
-      "addressRegion": "CA",
-      "postalCode": "92880",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 33.952684,
-      "longitude": -117.585737
-    },
-    "openingHours": "Mo-Su 08:00-20:00",
-    "sameAs": [
-      "https://maps.app.goo.gl/tnDSx8FfuAiSH4GN8"
-    ]
-  }
-  </script>
 
-  <header role="banner" aria-label="StarDeni site header">
-    <div class="container topbar">
-      <div class="brand">
-        <div class="logo" aria-hidden="true">SD</div>
-        <div>
-          <div class="site-title">StarDeni Independent Living</div>
-          <div class="small muted">13865 Ivywood Ct, Eastvale, CA • (951) 496-6577</div>
-        </div>
-      </div>
+<!-- HEADER -->
+<header class="header">
+    <div class="container header-flex">
+        <div class="logo">Stardeni Independent Living</div>
 
-      <nav role="navigation" aria-label="Main navigation">
-        <!-- Desktop links -->
-        <div class="nav-links" id="navLinks">
-          <div class="nav-item">
-            <a href="/assisted-living/" class="nav-link" aria-haspopup="true" data-mega="assisted">Assisted Living</a>
-          </div>
-          <div class="nav-item">
-            <a href="/independent-living/" class="nav-link" aria-haspopup="true" data-mega="independent">Independent Living</a>
-          </div>
-          <div class="nav-item">
-            <a href="/home-care/" class="nav-link" aria-haspopup="true" data-mega="homecare">Home Care</a>
-          </div>
-          <a href="/about/" class="nav-link">About</a>
-          <a href="/contact/" class="nav-link">Contact</a>
+        <!-- MOBILE MENU BUTTON -->
+        <div class="nav-toggle" id="navToggle">
+            <i class="fa fa-bars"></i>
         </div>
 
-        <a class="cta" href="/contact/" aria-label="Call StarDeni">Call (951) 496-6577</a>
-
-        <!-- Mobile toggle -->
-        <button class="mobile-toggle btn btn-outline" aria-expanded="false" aria-controls="mobileMenu" id="mobileToggle" style="display:none">
-          ☰ Menu
-        </button>
-      </nav>
-    </div>
-
-    <!-- Mega menu container (hidden by default, revealed by hover/focus or JS) -->
-    <div class="mega" id="megaMenu" aria-hidden="true">
-      <div class="container" role="menu" aria-label="Service menu">
-        <!-- Column templates for scaling — populate these from CMS/GROQ -->
-        <div class="mega-column">
-          <h4>Independent Living</h4>
-          <ul>
-            <li><a href="/independent-living/overview/">Overview</a></li>
-            <li><a href="/independent-living/amenities/">Amenities & Dining</a></li>
-            <li><a href="/independent-living/floor-plans/">Floor Plans</a></li>
-            <li><a href="/independent-living/resident-activities/">Activities & Events</a></li>
-          </ul>
-        </div>
-        <div class="mega-column">
-          <h4>Assisted Living</h4>
-          <ul>
-            <li><a href="/assisted-living/overview/">Care Philosophy</a></li>
-            <li><a href="/assisted-living/med-management/">Medication Support</a></li>
-            <li><a href="/assisted-living/therapy/">Therapies & Rehab</a></li>
-          </ul>
-        </div>
-        <div class="mega-column">
-          <h4>Home Care</h4>
-          <ul>
-            <li><a href="/home-care/in-home-services/">In-Home Support</a></li>
-            <li><a href="/home-care/companionship/">Companionship</a></li>
-            <li><a href="/home-care/transition-services/">Transition Services</a></li>
-          </ul>
-        </div>
-        <div class="mega-column">
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="/about/faq/">FAQ</a></li>
-            <li><a href="/about/careers/">Careers</a></li>
-            <li><a href="/contact/">Tour & Contact</a></li>
-            <li><a href="/blog/">Blog & News</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="container" role="main">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <span>Home</span>
-    </nav>
-
-    <section class="hero" aria-labelledby="heroTitle">
-      <div>
-        <div class="hero-card">
-          <h1 id="heroTitle">Comfortable, compassionate independent living in Eastvale</h1>
-          <p class="lead">At StarDeni Independent Living we provide residential accommodations, daily nutritious meals, laundry, housekeeping, and social referrals — all with safety and dignity at the center of everything we do.</p>
-
-          <div class="quick-ctas" role="region" aria-label="Quick actions">
-            <a class="btn" href="/contact/">Schedule a Tour</a>
-            <a class="btn btn-outline" href="/admissions/">Admissions & Pricing</a>
-            <a class="btn" href="/services/">View Services</a>
-          </div>
-
-          <div class="services" aria-label="Featured services">
-            <div class="service">
-              <h3>Private Residential Suites</h3>
-              <p class="small muted">Comfortable studio and one-bedroom layouts tailored for independent living.</p>
-            </div>
-            <div class="service">
-              <h3>Daily Nutritious Meals</h3>
-              <p class="small muted">Chef-planned menus and accommodations for dietary needs.</p>
-            </div>
-            <div class="service">
-              <h3>Housekeeping & Laundry</h3>
-              <p class="small muted">Weekly housekeeping, laundry services, and linen care included.</p>
-            </div>
-          </div>
-
-          <hr style="margin:18px 0;border:none;border-top:1px solid #f1eff8">
-
-          <div class="grid-2">
-            <div>
-              <h4>Why families choose StarDeni</h4>
-              <ul>
-                <li>Individualized support plans</li>
-                <li>Engaging activities & social programs</li>
-                <li>On-site coordination with local healthcare providers</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Quick contact</h4>
-              <div class="small muted">13865 Ivywood Ct, Eastvale, CA 92880</div>
-              <div style="font-weight:700;margin-top:6px">(951) 496-6577</div>
-              <div style="margin-top:8px"><a href="https://maps.app.goo.gl/tnDSx8FfuAiSH4GN8" class="small">Get directions (Google Maps)</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right column: map + contact card -->
-      <aside aria-labelledby="contactPanel" class="hero-card">
-        <h3 id="contactPanel">Visit Us</h3>
-        <div class="map-card card" aria-hidden="false">
-          <!-- Embedded map (provided) -->
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.5506360141762!2d-117.58573700000001!3d33.952684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dccbeac27cbf0b%3A0xaf9cb3af014539e6!2sStardeni%20Independent%20Living!5e0!3m2!1sen!2sus!4v1764699770468!5m2!1sen!2sus"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
-        <div class="contact-card card" style="margin-top:12px">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <div>
-              <div style="font-weight:700">StarDeni Independent Living</div>
-              <div class="small muted">Eastvale, CA</div>
-            </div>
-            <div class="badge">Tour</div>
-          </div>
-
-          <div style="margin-top:8px">
-            <div class="small muted">Phone</div>
-            <div style="font-weight:700">(951) 496-6577</div>
-            <div class="small muted" style="margin-top:8px">Address</div>
-            <div>13865 Ivywood Ct, Eastvale, CA 92880</div>
-          </div>
-
-          <a href="/contact/" class="btn" style="margin-top:10px">Request a Tour</a>
-          <a href="https://maps.app.goo.gl/tnDSx8FfuAiSH4GN8" class="btn btn-outline" style="margin-top:8px">Open in Maps</a>
-        </div>
-      </aside>
-    </section>
-
-    <!-- Testimonials & Quick facts -->
-    <section aria-labelledby="trust" style="margin-top:18px">
-      <h2 id="trust">Trusted by residents & families</h2>
-      <div class="testimonials" role="list">
-        <article class="testimonial" role="listitem">
-          <div style="font-weight:700">“We love the staff — compassionate and attentive.”</div>
-          <div class="small muted" style="margin-top:8px">— M. Hernandez, family</div>
-        </article>
-        <article class="testimonial" role="listitem">
-          <div style="font-weight:700">“Great activities calendar and the meals are excellent.”</div>
-          <div class="small muted" style="margin-top:8px">— J. Lee, resident</div>
-        </article>
-        <article class="testimonial" role="listitem">
-          <div style="font-weight:700">“Clean facility and responsive care coordinators.”</div>
-          <div class="small muted" style="margin-top:8px">— C. Patel, family</div>
-        </article>
-      </div>
-    </section>
-
-    <!-- FAQ & Helpful Resources -->
-    <section style="margin-top:22px" aria-labelledby="helpful">
-      <h2 id="helpful">Helpful information</h2>
-      <div class="card" style="margin-top:12px">
-        <div style="display:grid;grid-template-columns:2fr 1fr;gap:16px">
-          <div>
-            <h3>Frequently asked questions</h3>
-            <div class="faq-item">
-              <div class="faq-q" data-faq>What is the difference between independent and assisted living?</div>
-              <div class="faq-a">Independent living focuses on social and daily living services for residents who are mostly independent. Assisted living provides additional personal care and medication support. Contact us for a personalized care assessment.</div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-q" data-faq>Do you offer meals for special diets?</div>
-              <div class="faq-a">Yes — we provide accommodations for special diets, food allergies, and texture-modified meals when needed.</div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-q" data-faq>How can I schedule a tour?</div>
-              <div class="faq-a">Call (951) 496-6577 or use the "Request a Tour" form on our contact page to schedule an in-person or virtual tour.</div>
-            </div>
-          </div>
-
-          <aside>
-            <h3>Resource links</h3>
-            <ul style="padding-left:16px">
-              <li><a href="/admissions/">Admissions & Pricing</a></li>
-              <li><a href="/contact/">Schedule a Tour</a></li>
-              <li><a href="/blog/">Caregiving & Wellness Blog</a></li>
+        <!-- NAVIGATION MENU -->
+        <nav class="nav" id="navMenu">
+            <ul>
+                <li><a href="#">Assisted Living</a></li>
+                <li><a href="#">Independent Living</a></li>
+                <li><a href="#">Home Care</a></li>
+                <li><a href="#">About</a></li>
+                <li><a class="btn-primary" href="#">Contact</a></li>
             </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
+        </nav>
+    </div>
+</header>
 
-    <!-- CTA strip -->
-    <section style="margin-top:26px;margin-bottom:6px">
-      <div class="card" style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="container hero-content">
+        <h1>Safe, Comfortable & Supportive Senior Living in Eastvale, CA</h1>
+        <p>Empowering seniors with compassionate care and supportive services in a warm environment designed for healthier, happier, more independent living.</p>
+        <a href="#" class="btn-primary">Schedule a Tour</a>
+    </div>
+</section>
+
+
+<!-- ABOUT SECTION -->
+<section class="about">
+    <div class="container about-grid">
+
         <div>
-          <div style="font-weight:700">Ready to learn more?</div>
-          <div class="small muted">Schedule a tour or request our admissions packet today.</div>
-        </div>
-        <div style="display:flex;gap:8px">
-          <a href="/contact/" class="btn">Request a Tour</a>
-          <a href="/admissions/" class="btn btn-outline">Admissions</a>
-        </div>
-      </div>
-    </section>
-  </main>
+            <h2>Welcome to Stardeni Independent Living</h2>
+            <p>At StarDeni Independent Living, we strive to make a meaningful difference in the lives of individuals each day. We provide safe and comfortable residential accommodations, nutritious daily meals, housekeeping, laundry services, and social referrals tailored to the unique needs of our residents.</p>
 
-  <!-- Footer with templates and CMS-ready blocks -->
-  <footer role="contentinfo">
+            <p>Our mission is to offer a secure and welcoming home where residents can thrive, maintain independence, and reach personal goals — all while being supported by a compassionate team.</p>
+        </div>
+
+        <div>
+            <img src="https://images.unsplash.com/photo-1585432959449-466dfc2f52f7?q=80&w=800" alt="Senior living home" class="rounded-img" />
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FEATURES / SERVICES -->
+<section class="features">
+    <div class="container">
+        <h2>Our Services</h2>
+
+        <div class="features-grid">
+
+            <div class="feature-card">
+                <i class="fa-solid fa-house-chimney-user"></i>
+                <h3>Comfortable Accommodations</h3>
+                <p>Private and shared rooms designed for comfort, accessibility, and peace of mind.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa-solid fa-utensils"></i>
+                <h3>Nutritious Meal Plans</h3>
+                <p>Daily meals prepared with care to meet dietary guidelines and personal preferences.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa-solid fa-broom"></i>
+                <h3>Housekeeping & Laundry</h3>
+                <p>Reliable cleaning and laundry services to ensure a clean, pleasant living space.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                <h3>Social Support & Referrals</h3>
+                <p>Assistance connecting residents with community resources and social programs.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- MAP SECTION -->
+<section class="map-section">
+    <div class="container">
+        <h2>Find Us in Eastvale, CA</h2>
+
+        <div class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.5506360141762!2d-117.58573700000001!3d33.952684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dccbeac27cbf0b%3A0xaf9cb3af014539e6!2sStardeni%20Independent%20Living!5e0!3m2!1sen!2sus!4v1764699770468!5m2!1sen!2sus"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
     <div class="container footer-grid">
-      <div class="footer-col">
-        <h4>About StarDeni</h4>
-        <p class="small muted">StarDeni Independent Living strives to make a difference every day by providing safe, friendly residential care and services that support longer, healthier, and happier lives.</p>
-        <div style="margin-top:10px">
-          <div class="small muted">Address</div>
-          <div>13865 Ivywood Ct, Eastvale, CA 92880</div>
-          <div class="small muted" style="margin-top:6px">Phone</div>
-          <div>(951) 496-6577</div>
+
+        <div class="footer-section">
+            <h3>Stardeni Independent Living</h3>
+            <p>13865 Ivywood Ct<br>Eastvale, CA 92880</p>
+            <p><strong>(951) 496-6577</strong></p>
         </div>
-      </div>
 
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul style="padding-left:0;list-style:none">
-          <li><a href="/independent-living/">Independent Living</a></li>
-          <li><a href="/assisted-living/">Assisted Living</a></li>
-          <li><a href="/home-care/">Home Care</a></li>
-          <li><a href="/services/dining/">Dining & Nutrition</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Resources</h4>
-        <ul style="padding-left:0;list-style:none">
-          <li><a href="/about/faq/">FAQ</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/contact/">Contact & Tour</a></li>
-          <li><a href="/privacy-policy/">Privacy Policy</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Newsletter & Templates</h4>
-        <p class="small muted">Sign up for updates and events.</p>
-        <!-- Newsletter form - hook to CMS or email service -->
-        <form id="newsletterForm" class="card" aria-label="Newsletter signup" onsubmit="event.preventDefault(); alert('Hook this to your email service.');">
-          <label class="sr-only" for="email">Email address</label>
-          <input id="email" type="email" required placeholder="Email address" style="padding:10px;border-radius:8px;border:1px solid #e9e9f2;width:100%" />
-          <button type="submit" class="btn" style="width:100%;margin-top:8px">Subscribe</button>
-        </form>
-
-        <div style="margin-top:12px">
-          <strong>Footer templates</strong>
-          <p class="small muted">Use these blocks to populate site-wide content via CMS templates: Contact Card, Opening Hours, Quick Links, Local Resources, Legal.</p>
+        <div class="footer-section">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="#">Assisted Living</a></li>
+                <li><a href="#">Independent Living</a></li>
+                <li><a href="#">Home Care</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
-      </div>
+
+        <div class="footer-section">
+            <h4>Template Pages</h4>
+            <ul>
+                <li><a href="#">Amenities</a></li>
+                <li><a href="#">Resident Life</a></li>
+                <li><a href="#">Dining Program</a></li>
+                <li><a href="#">Common Questions</a></li>
+                <li><a href="#">Caregiver Resources</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Connect</h4>
+            <p><a href="https://maps.app.goo.gl/tnDSx8FfuAiSH4GN8" target="_blank">Google Map Listing</a></p>
+            <p><a href="#">Schedule a Tour</a></p>
+        </div>
+
     </div>
 
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center;margin-top:18px">
-      <div class="small muted">© <span id="year"></span> StarDeni Independent Living. All rights reserved.</div>
-      <div class="small muted">Managed listings: <a href="https://maps.app.goo.gl/tnDSx8FfuAiSH4GN8">Google Business Profile</a></div>
+    <div class="footer-bottom">
+        © 2025 Stardeni Independent Living — All Rights Reserved.
     </div>
-  </footer>
 
-  <!-- Lightweight JS for menu & interactions -->
-  <script>
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
+</footer>
 
-    // Mega menu show/hide logic with accessible keyboard support
-    const navLinks = document.querySelectorAll('[data-mega]');
-    const mega = document.getElementById('megaMenu');
-    let megaTimeout = null;
 
-    function showMega(){
-      if(megaTimeout) clearTimeout(megaTimeout);
-      mega.style.display = 'block';
-      mega.setAttribute('aria-hidden','false');
-    }
-    function hideMegaDelayed(){
-      if(megaTimeout) clearTimeout(megaTimeout);
-      megaTimeout = setTimeout(()=> {
-        mega.style.display = 'none';
-        mega.setAttribute('aria-hidden','true');
-      },220);
-    }
-
-    navLinks.forEach(link=>{
-      link.addEventListener('mouseenter', showMega);
-      link.addEventListener('focus', showMega);
-      link.addEventListener('mouseleave', hideMegaDelayed);
-    });
-    mega.addEventListener('mouseenter', showMega);
-    mega.addEventListener('mouseleave', hideMegaDelayed);
-
-    // Mobile toggle (show nav links and mega as accordion)
-    const mobileToggle = document.getElementById('mobileToggle');
-    const navLinksContainer = document.getElementById('navLinks');
-    function updateMobileToggle(){
-      const isMobile = window.matchMedia('(max-width:980px)').matches;
-      if(isMobile){
-        mobileToggle.style.display = 'inline-flex';
-      } else {
-        mobileToggle.style.display = 'none';
-        navLinksContainer.style.display = 'flex';
-      }
-    }
-    updateMobileToggle();
-    window.addEventListener('resize', updateMobileToggle);
-
-    mobileToggle.addEventListener('click', ()=>{
-      const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
-      mobileToggle.setAttribute('aria-expanded', String(!expanded));
-      navLinksContainer.style.display = expanded ? 'none' : 'flex';
-      navLinksContainer.style.flexDirection = 'column';
-      navLinksContainer.style.background = '#fff';
-      navLinksContainer.style.padding = '12px';
-      navLinksContainer.style.position = 'absolute';
-      navLinksContainer.style.right = '20px';
-      navLinksContainer.style.top = '72px';
-      navLinksContainer.style.boxShadow = '0 20px 40px rgba(20,20,60,0.08)';
-      navLinksContainer.style.borderRadius = '12px';
-    });
-
-    // FAQ toggle
-    document.querySelectorAll('[data-faq]').forEach(q=>{
-      q.addEventListener('click', ()=>{
-        const a = q.nextElementSibling;
-        const open = a.style.display === 'block';
-        a.style.display = open ? 'none' : 'block';
-        q.setAttribute('aria-expanded', !open);
-      });
-    });
-
-    // Lightweight on-site search stub (hook to site search or CMS)
-    function onSearch(query){
-      // If you have a site search API (Algolia / Elastic / CMS), call it here.
-      // For SEO best practice, ensure /search/?q=... is indexable or blocked per your strategy.
-      window.location.href = '/search/?q=' + encodeURIComponent(query);
-    }
-
-    // Example: wire up inline search if present
-    const searchInput = document.querySelector('.search input');
-    if(searchInput){
-      searchInput.addEventListener('keydown', (e)=>{
-        if(e.key === 'Enter'){
-          onSearch(searchInput.value.trim());
-        }
-      });
-    }
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
+
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #f8f8f8;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* NAVIGATION */
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: #2663F8;
+    padding: 10px 18px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #fff !important;
+    transition: .3s ease;
+}
+.btn-primary:hover {
+    background: #003bb8;
+}
+
+/* MOBILE MENU */
+.nav-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+@media(max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav {
+        position: absolute;
+        right: 20px;
+        top: 60px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 15px;
+        display: none;
+        width: 200px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+/* HERO SECTION */
+.hero {
+    background: url('https://images.unsplash.com/photo-1509622904850-01a0b6ae7bc1?q=80&w=1600') center/cover no-repeat;
+    padding: 120px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+
+/* ABOUT SECTION */
+.about {
+    padding: 60px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.rounded-img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+@media(max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* FEATURES */
+.features {
+    background: #fff;
+    padding: 60px 0;
+}
+
+.features h2 {
+    text-align: center;
+}
+
+.features-grid {
+    margin-top: 30px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.feature-card {
+    background: #f1f5ff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.feature-card i {
+    font-size: 40px;
+    color: #2663F8;
+    margin-bottom: 15px;
+}
+
+
+/* MAP SECTION */
+.map-section {
+    padding: 60px 0;
+}
+
+.map-responsive {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    border-radius: 10px;
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+
+/* FOOTER */
+.footer {
+    background: #1c1c1c;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-grid {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.footer-section h4, 
+.footer-section h3 {
+    margin-bottom: 15px;
+}
+
+.footer-section li {
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    color: #9abfff;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+}
+
+</style>
+
+
+<script>
+  // Mobile Menu Toggle
+const navToggle = document.getElementById("navToggle");
+const navMenu = document.getElementById("navMenu");
+
+navToggle.addEventListener("click", () => {
+    navMenu.style.display = navMenu.style.display === "block" ? "none" : "block";
+});
+
+</script>
