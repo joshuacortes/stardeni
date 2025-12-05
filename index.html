@@ -367,33 +367,140 @@ navToggle.addEventListener("click", () => {
     </div>
 </section>
 
-<!-- SERVICES -->
-<section class="features">
+  
+  
+   <section class="independent-features">
     <div class="container">
-        <h2>Our Services</h2>
+        <h2 class="feature-title">Independent Living Features</h2>
 
-        <div class="features-grid">
+        <div class="feature-content-grid">
 
-            <div class="feature-card">
-                <i class="fa-solid fa-house-chimney-user"></i>
-                <h3>Comfortable Accommodations</h3>
-                <p>Private and shared rooms designed for comfort, accessibility, and peace of mind.</p>
+            <div class="feature-block">
+                <h3>3 Bedroom & 2 Bedroom Options</h3>
+                <p>
+                    Residents can choose between spacious 3-bedroom or 2-bedroom living arrangements 
+                    depending on their preferences and needs. Each room is thoughtfully prepared to provide 
+                    personal space, comfort, and a sense of privacy while still being part of a shared 
+                    household environment.
+                </p>
             </div>
 
-            <div class="feature-card">
-                <i class="fa-solid fa-broom"></i>
-                <h3>Housekeeping & Laundry</h3>
-                <p>Reliable cleaning and laundry services to ensure a clean, pleasant living space.</p>
+            <div class="feature-block">
+                <h3>No Long-Term Contracts Required</h3>
+                <p>
+                    Our commitment to flexibility means no long-term leases or binding contracts. 
+                    Residents maintain control over their living situation, making our Independent Living 
+                    option ideal for individuals navigating transitional phases, recovery periods, 
+                    or simply seeking a stable home without added pressure.
+                </p>
             </div>
 
-            <div class="feature-card">
-                <i class="fa-solid fa-hand-holding-heart"></i>
-                <h3>Social Support & Referrals</h3>
-                <p>Assistance connecting residents with community resources and social programs.</p>
+            <div class="feature-block">
+                <h3>Clean & Fully Furnished Living Quarters</h3>
+                <p>
+                    Each room is move-in ready with comfortable furnishings, clean linens, essential 
+                    appliances, and a well-maintained environment. We prioritize cleanliness and organization 
+                    to ensure residents always feel at home in a safe, relaxing space.
+                </p>
+            </div>
+
+            <div class="feature-block">
+                <h3>WiFi / Internet Access</h3>
+                <p>
+                    High-speed internet is available throughout the home, allowing residents to stay 
+                    connected with friends, family, work, educational programs, or telehealth services. 
+                    Whether for entertainment or productivity, staying connected is made easy.
+                </p>
+            </div>
+
+            <div class="feature-block">
+                <h3>Access to Laundry Services</h3>
+                <p>
+                    Residents have full access to on-site laundry facilities or optional laundry support. 
+                    This added convenience ensures a clean, consistent living routine and reduces daily 
+                    stress related to household upkeep.
+                </p>
             </div>
 
         </div>
     </div>
+     
+     
+     
+  <style>
+    /* --- INDEPENDENT LIVING: CONTENT-HEAVY SECTIONS --- */
+
+.independent-overview {
+    padding: 70px 0;
+    background: #ffffff;
+}
+
+.overview-grid {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.overview-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.overview-text p {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+@media(max-width: 768px) {
+    .overview-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- FEATURE CONTENT GRID --- */
+
+.independent-features {
+    background: #fafafa;
+    padding: 80px 0;
+}
+
+.feature-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.feature-content-grid {
+    display: grid;
+    gap: 35px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.feature-block {
+    background: #f1f5ff;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.feature-block h3 {
+    font-size: 1.3rem;
+    color: #2663F8;
+    margin-bottom: 12px;
+}
+
+.feature-block p {
+    color: #555;
+    line-height: 1.65;
+    font-size: 1.05rem;
+}
+
+  </style>
+
 </section>
 
 <!-- CLEAN NEW MAP + CONTACT SECTION -->
