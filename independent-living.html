@@ -297,14 +297,6 @@ body {
 }
 </style>
 
-<script>
-const navToggle = document.getElementById("navToggle");
-const navMenu = document.getElementById("navMenu");
-
-navToggle.addEventListener("click", () => {
-    navMenu.style.display = navMenu.style.display === "block" ? "none" : "block";
-});
-</script>
 
 <body>
 
@@ -535,6 +527,14 @@ navToggle.addEventListener("click", () => {
     </div>
 
 </footer>
+<script>
+const navToggle = document.getElementById("navToggle");
+const navMenu = document.getElementById("navMenu");
+
+navToggle.addEventListener("click", () => {
+    navMenu.style.display = navMenu.style.display === "block" ? "none" : "block";
+});
+</script>
 
 </body>
 </html>
