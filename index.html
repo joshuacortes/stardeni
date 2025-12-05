@@ -11,10 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
-  
-  
 <style>
-  * {
+/* --- GLOBAL RESET --- */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -34,7 +33,7 @@ body {
     margin: auto;
 }
 
-/* HEADER */
+/* --- HEADER --- */
 .header {
     background: #ffffff;
     border-bottom: 1px solid #ddd;
@@ -56,7 +55,7 @@ body {
     font-weight: bold;
 }
 
-/* NAVIGATION */
+/* --- NAVIGATION --- */
 .nav ul {
     list-style: none;
     display: flex;
@@ -76,8 +75,9 @@ body {
     font-weight: 600;
     color: #fff !important;
     transition: .3s ease;
-  text-decoration:none;
+    text-decoration:none;
 }
+
 .btn-primary:hover {
     background: #003bb8;
 }
@@ -89,47 +89,6 @@ body {
     cursor: pointer;
 }
 
-  
-  
-  .why-choose {
-    padding: 70px 0;
-    background: #fefefe;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.why-grid {
-    display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.why-item {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    border: 1px solid #eee;
-    transition: .3s ease;
-}
-
-.why-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-}
-
-.why-item i {
-    font-size: 38px;
-    color: #2663F8;
-    margin-bottom: 15px;
-}
-
-  
-  
-  
 @media(max-width: 768px) {
     .nav-toggle {
         display: block;
@@ -153,8 +112,7 @@ body {
     }
 }
 
-
-/* HERO SECTION */
+/* --- HERO --- */
 .hero {
     background: 
         linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
@@ -174,8 +132,7 @@ body {
     margin: auto;
 }
 
-
-/* ABOUT SECTION */
+/* --- ABOUT --- */
 .about {
     padding: 60px 0;
 }
@@ -197,8 +154,7 @@ body {
     }
 }
 
-
-/* FEATURES */
+/* --- FEATURES --- */
 .features {
     background: #fff;
     padding: 60px 0;
@@ -228,8 +184,7 @@ body {
     margin-bottom: 15px;
 }
 
-
-  /* LOCATION SECTION (Apple-style clean layout) */
+/* --- CLEAN NEW LOCATION/CONTACT SECTION (APPLE STYLE) --- */
 .location-section {
     padding: 80px 0;
     background: #fafafa;
@@ -275,7 +230,6 @@ body {
     font-size: 1.2rem;
 }
 
-/* MAP */
 .location-map iframe {
     width: 100%;
     height: 260px;
@@ -284,7 +238,6 @@ body {
     box-shadow: 0 8px 22px rgba(0,0,0,0.1);
 }
 
-/* BUTTON MATCHING APPLE STYLE */
 .location-btn {
     display: inline-block;
     margin-top: 10px;
@@ -293,7 +246,6 @@ body {
     border-radius: 8px;
 }
 
-/* RESPONSIVE */
 @media(max-width: 768px) {
     .location-grid {
         grid-template-columns: 1fr;
@@ -309,10 +261,7 @@ body {
     }
 }
 
-  
-
-
-/* FOOTER */
+/* --- FOOTER --- */
 .footer {
     background: #1c1c1c;
     color: #fff;
@@ -346,23 +295,17 @@ body {
     padding-top: 20px;
     text-align: center;
 }
-
 </style>
 
-
 <script>
-  // Mobile Menu Toggle
 const navToggle = document.getElementById("navToggle");
 const navMenu = document.getElementById("navMenu");
 
 navToggle.addEventListener("click", () => {
     navMenu.style.display = navMenu.style.display === "block" ? "none" : "block";
 });
-
 </script>
 
-  
-  
 <body>
 
 <!-- HEADER -->
@@ -370,59 +313,51 @@ navToggle.addEventListener("click", () => {
     <div class="container header-flex">
         <div class="logo">Stardeni Independent Living</div>
 
-        <!-- MOBILE MENU BUTTON -->
         <div class="nav-toggle" id="navToggle">
             <i class="fa fa-bars"></i>
         </div>
 
-        <!-- NAVIGATION MENU -->
         <nav class="nav" id="navMenu">
             <ul>
-                <li><a href="#">Assisted Living</a></li>
-                <li><a href="#">Independent Living</a></li>
-                <li><a href="#">Home Care</a></li>
-                <li><a href="#">About</a></li>
-                <li><a class="btn-primary" href="#">Contact</a></li>
+                <li><a href="/assisted-living">Assisted Living</a></li>
+                <li><a href="/independent-living">Independent Living</a></li>
+                <li><a href="/home-care">Home Care</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a class="btn-primary" href="/contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section class="hero">
     <div class="container hero-content">
-        <h1>Safe, Comfortable & Supportive Independent Living in Eastvale, CA</h1>
-        <p>Empowering people with compassionate care and supportive services in a warm environment designed for healthier, happier, more independent living.</p><br>
+        <h1>Safe, Comfortable & Supportive Senior Living in Eastvale, CA</h1>
+        <p>Empowering seniors with compassionate care and supportive services in a warm environment designed for healthier, happier, more independent living.</p><br>
       
         <a href="tel:3233927069" class="btn-primary">Call for Availability</a>
-
     </div>
 </section>
 
-
-<!-- ABOUT SECTION -->
+<!-- ABOUT -->
 <section class="about">
     <div class="container about-grid">
 
         <div>
             <h2>Welcome to Stardeni Independent Living</h2>
-          <br>
-            <p>At StarDeni Independent Living, we strive to make a meaningful difference in the lives of individuals each day. We provide safe and comfortable residential accommodations, access to laundry, living quarters, wi-fi & other benefits available to the needs of our residents.</p>
-<br>
-            <p>Our mission is to offer a secure and welcoming home where residents can thrive, maintain independence, and reach personal goals - all while being supported by a compassionate team.</p>
-<br><br>
-          <h2>Stardeni Independent Living <br>
-            Features & Benefits</h2>
-          <p>
-            3 Bedroom & 2 Bedroom Options<br>
-            No Contracts<br>
-            Clean & Fully Furnished Living Quarters<br>
-            WiFi/Internet Access<br>
-            Access to Laundry Services<br>
-           
-            
-          </p>
+            <p>At StarDeni Independent Living, we strive to make a meaningful difference in the lives of individuals each day. We provide safe and comfortable residential accommodations, housekeeping, laundry services, and social referrals tailored to the unique needs of our residents.</p>
+
+            <p>Our mission is to offer a secure and welcoming home where residents can thrive, maintain independence, and reach personal goals — all while being supported by a compassionate team.</p>
+            <br><br>
+
+            <h2>Stardeni Independent Living Features & Benefits</h2>
+            <p>
+                3 Bedroom & 2 Bedroom Options<br>
+                No Contracts<br>
+                Clean & Fully Furnished Living Quarters<br>
+                WiFi/Internet Access<br>
+                Access to Laundry Services<br>
+            </p>
         </div>
 
         <div>
@@ -432,52 +367,44 @@ navToggle.addEventListener("click", () => {
     </div>
 </section>
 
-  
-  
-  <section class="why-choose">
+<!-- SERVICES -->
+<section class="features">
     <div class="container">
-        <h2 class="section-title">Why Choose Stardeni Independent Living?</h2>
+        <h2>Our Services</h2>
 
-        <div class="why-grid">
-            <div class="why-item">
-                <i class="fa-solid fa-shield-heart"></i>
-                <h3>Safe Environment</h3>
-                <p>A secure, monitored home that ensures residents feel safe and supported every day.</p>
+        <div class="features-grid">
+
+            <div class="feature-card">
+                <i class="fa-solid fa-house-chimney-user"></i>
+                <h3>Comfortable Accommodations</h3>
+                <p>Private and shared rooms designed for comfort, accessibility, and peace of mind.</p>
             </div>
 
-            <div class="why-item">
-                <i class="fa-solid fa-people-group"></i>
-                <h3>Community Feel</h3>
-                <p>A warm, family-like atmosphere where residents can connect, socialize, and thrive.</p>
+            <div class="feature-card">
+                <i class="fa-solid fa-broom"></i>
+                <h3>Housekeeping & Laundry</h3>
+                <p>Reliable cleaning and laundry services to ensure a clean, pleasant living space.</p>
             </div>
 
-            <div class="why-item">
-                <i class="fa-solid fa-bed"></i>
-                <h3>Comfortable Living</h3>
-                <p>Fully furnished, thoughtfully designed rooms tailored for comfort and accessibility.</p>
+            <div class="feature-card">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                <h3>Social Support & Referrals</h3>
+                <p>Assistance connecting residents with community resources and social programs.</p>
             </div>
 
-            <div class="why-item">
-                <i class="fa-solid fa-handshake-angle"></i>
-                <h3>Compassionate Staff</h3>
-                <p>A dedicated team committed to providing respectful, personalized support.</p>
-            </div>
         </div>
     </div>
 </section>
 
-  
-
-
-<!-- LOCATION / CONTACT SECTION -->
+<!-- CLEAN NEW MAP + CONTACT SECTION -->
 <section class="location-section">
     <div class="container location-grid">
 
         <div class="location-info">
             <h2 class="location-title">Visit Us in Eastvale, CA</h2>
             <p class="location-text">
-                We welcome visits and inquiries. Reach out anytime to learn more
-                about our independent living options or to schedule a tour.
+                We welcome visits and inquiries. Reach out anytime to learn more about 
+                our independent living options or to schedule a tour.
             </p>
 
             <ul class="location-details">
@@ -486,7 +413,7 @@ navToggle.addEventListener("click", () => {
                 <li><i class="fa-solid fa-clock"></i> Open Daily: 8:00 AM – 6:00 PM</li>
             </ul>
 
-            <a href="tel:9514966577" class="btn-primary location-btn">Call Now</a>
+            <a href="/contact" class="btn-primary location-btn">Contact Us</a>
         </div>
 
         <div class="location-map">
@@ -500,8 +427,6 @@ navToggle.addEventListener("click", () => {
 
     </div>
 </section>
-
-
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -517,29 +442,29 @@ navToggle.addEventListener("click", () => {
         <div class="footer-section">
             <h4>Navigation</h4>
             <ul>
-                <li><a href="#">Assisted Living</a></li>
-                <li><a href="#">Independent Living</a></li>
-                <li><a href="#">Home Care</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/assisted-living">Assisted Living</a></li>
+                <li><a href="/independent-living">Independent Living</a></li>
+                <li><a href="/home-care">Home Care</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </div>
 
         <div class="footer-section">
             <h4>Template Pages</h4>
             <ul>
-                <li><a href="#">Amenities</a></li>
-                <li><a href="#">Resident Life</a></li>
-                <li><a href="#">Dining Program</a></li>
-                <li><a href="#">Common Questions</a></li>
-                <li><a href="#">Caregiver Resources</a></li>
+                <li><a href="/amenities">Amenities</a></li>
+                <li><a href="/resident-life">Resident Life</a></li>
+                <li><a href="/dining-program">Dining Program</a></li>
+                <li><a href="/faq">Common Questions</a></li>
+                <li><a href="/caregiver-resources">Caregiver Resources</a></li>
             </ul>
         </div>
 
         <div class="footer-section">
             <h4>Connect</h4>
-            <p><a href="https://maps.app.goo.gl/tnDSx8FfuAiSH4GN8" target="_blank">Google Map Listing</a></p>
-            <p><a href="#">Schedule a Tour</a></p>
+            <p><a href="/google-map">Google Map Listing</a></p>
+            <p><a href="/schedule-tour">Schedule a Tour</a></p>
         </div>
 
     </div>
@@ -550,8 +475,5 @@ navToggle.addEventListener("click", () => {
 
 </footer>
 
-
-<script src="script.js"></script>
 </body>
 </html>
-
